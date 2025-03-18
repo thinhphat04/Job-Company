@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  postgres:
+    container_name: postgres_container_new
+    image: postgres
+    environment:
+      POSTGRES_USER: thinhphat04
+      POSTGRES_PASSWORD: thinhphat04
+      POSTGRES_DB: job
+    ports:
+      - "5432:5432"
+
+  pgadmin:
+    container_name: pgadmin_container
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: pgadmin@pgadmin.org
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
